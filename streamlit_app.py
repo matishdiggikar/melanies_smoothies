@@ -3,11 +3,11 @@ import streamlit as st
 from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col 
 
+
 # Write directly to the app
 st.title("SMOOTHIES!:mango:")
 st.write(
-    """SELECT YOUR SMOOTHIES! 
-    """)
+    """SELECT YOUR SMOOTHIES! """)
 
 
 name_on_order = st.text_input('Name On Smoothies:')
@@ -21,7 +21,7 @@ ingredients_list=st.multiselect(
     'Choose up to 5 ingredients:'
     ,my_dataframe
     ,max_selections=5
-    )
+)
 
 if ingredients_list:
     ingredients_string=''
